@@ -5,11 +5,19 @@ console.log("test")
 //WHEN I open the planner
 
 // THEN the CURRENT DAY IS DISPLAYED AT THE TOP OF THE CALENDAR
+
+const m = moment();
+console.log(m.toString());
+
+console.log(m.format("dddd MMMM Mo YYYY"))
+console.log(m.format("[Today's Current date and time is] dddd, MMMM Mo, YYYY."))
+
 // see google search - javascript-exercises-Display the current day and time in a specific format-switch to ES6 version
+
 const today = new Date();
   const day = today.getDay();
   const daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-  console.log(`Today is : ${daylist[day]}.`);
+  console.log(`Today is  ${daylist[day]}.`);
   let hour = today.getHours();
   const minute = today.getMinutes();
   const second = today.getSeconds();
@@ -41,7 +49,7 @@ const today = new Date();
   prepand=' AM';
   } 
   } 
-console.log(`Current Time : ${hour}${prepand} : ${minute} : ${second}`);
+console.log(`Current Time : ${hour}:${minute}${prepand}.`);
 
 
 
