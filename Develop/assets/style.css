@@ -26,8 +26,24 @@ textarea{
 }
 
 .time-block{
+  
   text-align: center;
   border-radius: 15px;
+}
+
+.column{
+  float: left;
+  width: 33.33%;
+  padding: 10px; 
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border:1px solid black;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .row {
@@ -40,6 +56,15 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  float: left;
+  width: 10%;
+  padding: 5px; 
+  border-right: 1px;
+
+ border-right: 1px
+  solid black;
+  border-top-left-radius: 15px;
+
 }
 
 .past {

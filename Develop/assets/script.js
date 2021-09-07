@@ -50,7 +50,9 @@ const today = new Date();
   prepand=' AM';
   } 
   } 
-console.log(`Current Time : ${hour}:${minute}${prepand}. `);
+  console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."))
+  console.log(m.format("[The current time is] h:mm a"))
+  
 
 
 
