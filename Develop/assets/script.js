@@ -9,8 +9,9 @@ console.log("test")
 const m = moment();
 console.log(m.toString());
 
-console.log(m.format("dddd MMMM Mo YYYY"))
-console.log(m.format("[Today's Current date and time is] dddd, MMMM Mo, YYYY."))
+console.log(m.format("dddd MMMM D, YYYY"))
+console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."))
+console.log(m.format("[The current time is] h:mm a"))
 
 // see google search - javascript-exercises-Display the current day and time in a specific format-switch to ES6 version
 
@@ -49,7 +50,7 @@ const today = new Date();
   prepand=' AM';
   } 
   } 
-console.log(`Current Time : ${hour}:${minute}${prepand}.`);
+console.log(`Current Time : ${hour}:${minute}${prepand}. `);
 
 
 
