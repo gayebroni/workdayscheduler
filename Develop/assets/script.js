@@ -6,54 +6,46 @@ console.log("test")
 
 // THEN the CURRENT DAY IS DISPLAYED AT THE TOP OF THE CALENDAR
 // see google search - javascript-exercises-Display the current day and time in a specific format-switch to ES6 version
-const dayjs = daysjs()
-const now = dayjs();
+const today = new Date();
+  const day = today.getDay();
+  const daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  console.log(`Today is : ${daylist[day]}.`);
+  let hour = today.getHours();
+  const minute = today.getMinutes();
+  const second = today.getSeconds();
+  let prepand = (hour >= 12)? " PM ":" AM ";
+  hour = (hour >= 12)? hour - 12: hour;
+  if (hour===0 && prepand===' PM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Noon';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' PM';
+  } 
+  } 
+  if (hour===0 && prepand===' AM ') 
+  { 
+  if (minute===0 && second===0)
+  { 
+  hour=12;
+  prepand=' Midnight';
+  } 
+  else
+  { 
+  hour=12;
+  prepand=' AM';
+  } 
+  } 
+console.log(`Current Time : ${hour}${prepand} : ${minute} : ${second}`);
 
-daysjs.extend(arraySupport);
- 
 
-  const day = dayjs(D);
-  dayjs.getCurrentTime(['dddd, ' + 'MMMM ' + 'D ' + 'hh ' + 'mm' ]);
 
-  console.log(dayjs);
 
-//   const daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-//   console.log(`Today is : ${daylist[day]}.`);
-//   let hour = now.getHours();
-//   const minute = now.getMinutes();
-//   const second = now.getSeconds();
-//   let prepand = (hour >= 12)? " PM ":" AM ";
-//   hour = (hour >= 12)? hour - 12: hour;
-//   if (hour===0 && prepand===' PM ') 
-//   { 
-//   if (minute===0 && second===0)
-//   { 
-//   hour=12;
-//   prepand=' Noon';
-//   } 
-//   else
-//   { 
-//   hour=12;
-//   prepand=' PM';
-//   } 
-//   } 
-//   if (hour===0 && prepand===' AM ') 
-//   { 
-//   if (minute===0 && second===0)
-//   { 
-//   hour=12;
-//   prepand=' Midnight';
-//   } 
-//   else
-//   { 
-//   hour=12;
-//   prepand=' AM';
-//   } 
-//   } 
-// console.log(`Current Time : ${hour}${prepand} : ${minute} : ${second}`);
-// end of javascript code from google search - do I need "seconds"?  
-
-dayjs.getCurrentTime('dddd, ' + 'MMMM ' + 'D ' + 'hh ' + 'mm' )
 
 
 
