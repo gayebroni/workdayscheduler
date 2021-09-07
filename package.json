@@ -1,0 +1,22 @@
+{
+  "name": "workdayscheduler",
+  "version": "1.0.0",
+  "description": "daily calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gayebroni/workdayscheduler.git"
+  },
+  "author": "gaye proctor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gayebroni/workdayscheduler/issues"
+  },
+  "homepage": "https://github.com/gayebroni/workdayscheduler#readme",
+  "dependencies": {
+    "dayjs": "^1.10.6"
+  }
+}
