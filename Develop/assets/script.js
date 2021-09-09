@@ -50,14 +50,17 @@ const today = new Date();
   prepand=' AM';
   } 
   } 
-  console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."))
+  console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."));
   console.log(m.format("[The current time is] h:mm a"))
-  
+ 
+
+$("#currentDay").text(moment().format("dddd, MMMM D, YYYY."));
+
+$("#currentTime").text(moment().format("h:mm a ."));
 
 
 
-
-
+// REMEMBER - The above is for the header / display current time and day not the rows. 
 
 
 
@@ -66,7 +69,7 @@ const today = new Date();
 // WHEN I scroll down
 
 // THEN I am presented with TIME BLOCKS FOR STANDARD BUSINESS HOURS
-
+// See HTML TIME BLOCKS
 // WHEN I view the time blocks for that day
 
 // THEN each time block is COLOR-CODED to indicate that whether it is in the past, present, or future
