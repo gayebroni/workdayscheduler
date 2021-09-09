@@ -54,9 +54,9 @@ const today = new Date();
   console.log(m.format("[The current time is] h:mm a"))
  
 
-$("#currentDay").text(moment().format("dddd, MMMM D, YYYY."));
+$("#currentDay").text(moment().format("dddd, MMMM D, YYYY"));
 
-$("#currentTime").text(moment().format("h:mm a ."));
+$("#currentTime").text(moment().format("h:mm a"));
 
 
 
