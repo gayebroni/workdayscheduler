@@ -13,7 +13,7 @@ console.log(m.format("dddd MMMM D, YYYY"))
 console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."))
 console.log(m.format("[The current time is] h:mm a"))
 
-// see google search - javascript-exercises-Display the current day and time in a specific format-switch to ES6 version
+// see  module 5 content and google search - javascript-exercises-Display the current day and time in a specific format-switch to ES6 version
 
 const today = new Date();
   const day = today.getDay();
@@ -73,6 +73,17 @@ $("#currentTime").text(moment().format("h:mm a"));
 // WHEN I view the time blocks for that day
 
 // THEN each time block is COLOR-CODED to indicate that whether it is in the past, present, or future
+
+// See Module 5 using moment.js
+var present = moment().format("MMMM Do, YYYY - hh:mm:ss a");
+console.log(present);
+
+var future= moment().add(1, "day").format("dddd, MM-D-YYYY [at] hh:mm:ss A");
+console.log(future);
+// This needs to be changed for future
+
+var past = moment("12-01-1999", "MM-DD-YYYY").format("dddd, MM/DD/YY");
+console.log(past);
 
 
 // WHEN I click into a time block
