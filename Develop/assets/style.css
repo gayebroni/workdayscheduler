@@ -83,7 +83,7 @@ textarea{
 }
 
 .material-icons.md-24 { 
-  font-size: 24px; 
+  font-size: 45px; 
 }
 .saveBtn {
   border-left: 1px solid black;
@@ -94,8 +94,9 @@ textarea{
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 35px;
   transition: all .3s ease-in-out;
+  color: rgb(98, 17, 98)
 }
 
 
