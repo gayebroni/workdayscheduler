@@ -1,5 +1,5 @@
-// ADD important events to a daily planner 
-console.log("test")
+// ADD important events to a daily planner
+console.log("test");
 // GIVEN I am using a daily planner to create a schedule
 
 //WHEN I open the planner
@@ -9,62 +9,55 @@ console.log("test")
 const m = moment();
 console.log(m.toString());
 
-console.log(m.format("dddd MMMM D, YYYY"))
-console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."))
-console.log(m.format("[The current time is] h:mm a"))
+console.log(m.format("dddd MMMM D, YYYY"));
+console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."));
+console.log(m.format("[The current time is] h:mm a"));
 
 // see  module 5 content and google search - javascript-exercises-Display the current day and time in a specific format-switch to ES6 version
 
 const today = new Date();
-  const day = today.getDay();
-  const daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-  console.log(`Today is  ${daylist[day]}.`);
-  let hour = today.getHours();
-  const minute = today.getMinutes();
-  const second = today.getSeconds();
-  let prepand = (hour >= 12)? " PM ":" AM ";
-  hour = (hour >= 12)? hour - 12: hour;
-  if (hour===0 && prepand===' PM ') 
-  { 
-  if (minute===0 && second===0)
-  { 
-  hour=12;
-  prepand=' Noon';
-  } 
-  else
-  { 
-  hour=12;
-  prepand=' PM';
-  } 
-  } 
-  if (hour===0 && prepand===' AM ') 
-  { 
-  if (minute===0 && second===0)
-  { 
-  hour=12;
-  prepand=' Midnight';
-  } 
-  else
-  { 
-  hour=12;
-  prepand=' AM';
-  } 
-  } 
-  console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."));
-  console.log(m.format("[The current time is] h:mm a"))
- 
+const day = today.getDay();
+const daylist = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday ",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+console.log(`Today is  ${daylist[day]}.`);
+let hour = today.getHours();
+const minute = today.getMinutes();
+const second = today.getSeconds();
+let prepand = hour >= 12 ? " PM " : " AM ";
+hour = hour >= 12 ? hour - 12 : hour;
+if (hour === 0 && prepand === " PM ") {
+  if (minute === 0 && second === 0) {
+    hour = 12;
+    prepand = " Noon";
+  } else {
+    hour = 12;
+    prepand = " PM";
+  }
+}
+if (hour === 0 && prepand === " AM ") {
+  if (minute === 0 && second === 0) {
+    hour = 12;
+    prepand = " Midnight";
+  } else {
+    hour = 12;
+    prepand = " AM";
+  }
+}
+console.log(m.format("[Today's Current date is] dddd, MMMM D, YYYY."));
+console.log(m.format("[The current time is] h:mm a"));
 
 $("#currentDay").text(moment().format("dddd, MMMM D, YYYY"));
 
 $("#currentTime").text(moment().format("h:mm a"));
 
-
-
-// REMEMBER - The above is for the header / display current time and day not the rows. 
-
-
-
-
+// REMEMBER - The above is for the header / display current time and day not the rows.
 
 // WHEN I scroll down
 
@@ -78,13 +71,12 @@ $("#currentTime").text(moment().format("h:mm a"));
 var present = moment().format("MMMM Do, YYYY - hh:mm:ss a");
 console.log(present);
 
-var future= moment().add(1, "day").format("dddd, MM-D-YYYY [at] hh:mm:ss A");
+var future = moment().add(1, "day").format("dddd, MM-D-YYYY [at] hh:mm:ss A");
 console.log(future);
 // This needs to be changed for future
 
 var past = moment("12-01-1999", "MM-DD-YYYY").format("dddd, MM/DD/YY");
 console.log(past);
-
 
 // WHEN I click into a time block
 
@@ -92,10 +84,25 @@ console.log(past);
 
 // WHEN I click the save button for that time block
 
-
-
 // THEN the text for that event is saved in local storage
 
 // WHEN I refresh the page
 
 // THEN the saved events persist
+
+// Add functionality to the code that
+let tasks = JSON.parse(localStorage.getItem('myTasks'))
+if (!tasks) {
+  tasks = []
+}
+const [firstTask] = tasks
+$('#contentAt9').text(firstTask)
+
+const saveButton = () =>{
+  console.log('[click] Save button')
+  const contentAt9 = $('#contentAt9').text();
+  localStorage.setItem('myTasks', JSON.stringify([contentAt9]))
+}
+
+$('#saveAt9').click(saveButton)
+//debugger
