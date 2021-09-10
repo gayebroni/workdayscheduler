@@ -90,11 +90,13 @@ console.log(past);
 
 // THEN the saved events persist
 
-// Add functionality to the code that
+// Add functionality to the code that.... 
 let tasks = JSON.parse(localStorage.getItem('myTasks'))
+// 'getItem' this retrieves entries:
 if (!tasks) {
   tasks = []
 }
+
 const [firstTask] = tasks
 $('#contentAt9').text(firstTask)
 
@@ -103,6 +105,14 @@ const saveButton = () =>{
   const contentAt9 = $('#contentAt9').text();
   localStorage.setItem('myTasks', JSON.stringify([contentAt9]))
 }
+// 'setItem' method saves to localStorage
 
 $('#saveAt9').click(saveButton)
 //debugger
+
+// if currentTime is < time-block 
+// then = past
+// else if currentTime is > time-block
+// then = future
+// else if currentTime is == time-block
+// then = present
