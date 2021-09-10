@@ -110,9 +110,9 @@ const saveButton = () =>{
 $('#saveAt9').click(saveButton)
 //debugger
 
-// if currentTime is < time-block 
+// if time-block is < currentTime
 // then = past
-// else if currentTime is > time-block
+// else if time-block > currentTime
 // then = future
-// else if currentTime is == time-block
+// else if time-block == currentTime
 // then = present
