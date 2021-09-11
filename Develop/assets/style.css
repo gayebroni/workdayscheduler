@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -33,7 +33,7 @@ textarea{
 
 .column{
   float: left;
-  width: 23.33%;
+  width: 33.33%;
   padding: 10px; 
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -47,7 +47,7 @@ textarea{
 }
 
 .row {
-  white-space: pre-wrap;
+  white-space: normal;
   height: 80px;
   border-top: 1px solid rgb(32, 24, 24);;
 }
@@ -60,10 +60,10 @@ textarea{
   width: 10%;
   padding: 5px; 
   border-right: 1px;
-
- border-right: 1px
+  border-left: 2px
   solid black;
   border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 
 }
 
@@ -85,6 +85,7 @@ textarea{
 .material-icons.md-24 { 
   font-size: 45px; 
 }
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
