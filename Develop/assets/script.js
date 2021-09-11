@@ -65,30 +65,8 @@ $("#currentTime").text(moment().format("h:mm a"));
 // See HTML TIME BLOCKS
 // WHEN I view the time blocks for that day
 
-// THEN each time block is COLOR-CODED to indicate that whether it is in the past, present, or future
+// THEN each time block is COLOR-CODED to indicate that whether it is in the past, present, or fug
 
-// See Module 5 using moment.js
-var present = moment().format("MMMM Do, YYYY - hh:mm:ss a");
-console.log(present);
-
-var future = moment().add(1, "day").format("dddd, MM-D-YYYY [at] hh:mm:ss A");
-console.log(future);
-// This needs to be changed for future
-
-var past = moment("12-01-1999", "MM-DD-YYYY").format("dddd, MM/DD/YY");
-console.log(past);
-
-// WHEN I click into a time block
-
-// THEN I can enter an event
-
-// WHEN I click the save button for that time block
-
-// THEN the text for that event is saved in local storage
-
-// WHEN I refresh the page
-
-// THEN the saved events persist
 
 // Add functionality to the code that.... 
 let tasks = JSON.parse(localStorage.getItem('myTasks'))
