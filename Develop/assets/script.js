@@ -114,10 +114,9 @@ function saveButton () {
     $('#contentAt10').text(),
     $('#contentAt11').text(),
     $('#contentAt12').text(),
-    $('#contentAt1').text(),
-    $('#contentAt2').text(),
-    $('#contentAt3').text()
-
+    $('#contentAt13').text(),
+    $('#contentAt14').text(),
+    $('#contentAt15').text(),
   ]))
 }
 
