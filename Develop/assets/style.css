@@ -53,6 +53,7 @@ textarea{
 }
 
 .hour {
+  text-align: center;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
@@ -70,6 +71,7 @@ textarea{
 .past {
   background-color: #d3d3d3;
   color: white;
+  
 }
 
 .present {
@@ -86,6 +88,7 @@ textarea{
   font-size: 45px; 
 }
 
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -94,10 +97,16 @@ textarea{
   color: white;
 }
 
+
 .saveBtn i:hover {
   font-size: 35px;
   transition: all .3s ease-in-out;
   color: rgb(98, 17, 98)
 }
 
-
+.footer {
+  font-size: 30px;
+  color:cornflowerblue;
+  font-weight: bold;
+  text-align: center;
+}
