@@ -94,25 +94,37 @@ console.log(past);
 let tasks = JSON.parse(localStorage.getItem('myTasks'))
 // 'getItem' this retrieves entries:
 if (!tasks) {
-  tasks = []
+  tasks = ['','','','','','','','']
 }
 
-const [firstTask] = tasks
-$('#contentAt9').text(firstTask)
+function getClassColor(time) {
+  const currentHour = Number(moment().format('H'))
 
-const saveButton = () =>{
+  if (currentHour < time) {
+    return 'future'
+  } else if (currentHour > time) {
+    return 'past'
+  }
+  return 'present'
+}
+function saveButton () {
   console.log('[click] Save button')
-  const contentAt9 = $('#contentAt9').text();
-  localStorage.setItem('myTasks', JSON.stringify([contentAt9]))
+  localStorage.setItem('myTasks', JSON.stringify([
+    $('#contentAt9').text(),
+    $('#contentAt10').text(),
+    $('#contentAt11').text(),
+  ]))
 }
+
+for(let i=0; i < 3; i++) {
+  const time = i + 9;
+  const task = tasks[i].trim()
+  console.log('Index['+i+'] Time['+time+']'+' Task['+task+']')
+  $('#contentAt'+time).addClass(getClassColor(time)).text(task)
+  $('#saveAt'+time).click(saveButton)
+}
+
+
 // 'setItem' method saves to localStorage
 
-$('#saveAt9').click(saveButton)
-//debugger
 
-// if time-block is < currentTime
-// then = past
-// else if time-block > currentTime
-// then = future
-// else if time-block == currentTime
-// then = present
