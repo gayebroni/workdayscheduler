@@ -126,5 +126,5 @@ for(let i=0; i < 3; i++) {
 
 
 // 'setItem' method saves to localStorage
-
+// can I use the repeat method to duplicate rows with these features included?
 
