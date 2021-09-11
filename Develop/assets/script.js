@@ -113,10 +113,15 @@ function saveButton () {
     $('#contentAt9').text(),
     $('#contentAt10').text(),
     $('#contentAt11').text(),
+    $('#contentAt12').text(),
+    $('#contentAt1').text(),
+    $('#contentAt2').text(),
+    $('#contentAt3').text()
+
   ]))
 }
 
-for(let i=0; i < 3; i++) {
+for(let i=0; i < 7; i++) {
   const time = i + 9;
   const task = tasks[i].trim()
   console.log('Index['+i+'] Time['+time+']'+' Task['+task+']')

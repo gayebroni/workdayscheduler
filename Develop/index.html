@@ -19,7 +19,10 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
 
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Work Day Scheduler</title>
@@ -41,61 +44,84 @@
         <div id=scheduled-event-column</div>
         <div id=save-button-column</div>
       </div> -->
-<!-- bootcamp lesson on Bootstrap grid layout and Form component - w3schools "how TO- Three column layout" -->
+      <!-- bootcamp lesson on Bootstrap grid layout and Form component - w3schools "how TO- Three column layout" -->
 
-<div id="time-block"> 
-  <div class="container">
-    <div class="row" id="rowAt9">
-      <div class="hour col-2">
-        9am 
+      <div id="time-block">
+        <div class="container">
+          <div class="row" id="rowAt9">
+            <div class="hour col-2">9am</div>
+            <div contenteditable="true" class="col-9" id="contentAt9">
+              Write your Task here!
+            </div>
+            <div class="saveBtn" id="saveAt9" class="col-4" class="i">
+              <i class="material-icons md-24">save</i>
+            </div>
+          </div>
+
+          <div class="row" id="rowAt10">
+            <div class="hour col-2">10am</div>
+            <div contenteditable="true" class="col-9" id="contentAt10">
+              Write your Task here!
+            </div>
+            <div class="saveBtn" id="saveAt10" class="col-4" class="i">
+              <i class="material-icons md-24">save</i>
+            </div>
+          </div>
+
+          <div class="row" id="rowAt11">
+            <div class="hour col-2">11am</div>
+            <div contenteditable="true" class="col-9" id="contentAt11">
+              Write your Task here!
+            </div>
+            <div class="saveBtn" id="saveAt11" class="col-4" class="i">
+              <i class="material-icons md-24">save</i>
+            </div>
+          </div>
+
+          <div class="row" id="rowAt12">
+            <div class="hour col-2">12pm</div>
+            <div contenteditable="true" class="col-9" id="contentAt12">
+              Write your Task here!
+            </div>
+            <div class="saveBtn" id="saveAt12" class="col-4" class="i">
+              <i class="material-icons md-24">save</i>
+            </div>
+          </div>
+          <div class="row" id="rowAt1">
+            <div class="hour col-2">1pm</div>
+            <div contenteditable="true" class="col-9" id="contentAt1">
+              Write your Task here!
+            </div>
+            <div class="saveBtn" id="saveAt1" class="col-4" class="i">
+              <i class="material-icons md-24">save</i>
+            </div>
+          </div>
+          <div class="row" id="rowAt2">
+            <div class="hour col-2">2pm</div>
+            <div contenteditable="true" class="col-9" id="contentAt2">
+              Write your Task here!
+            </div>
+            <div class="saveBtn" id="saveAt2" class="col-4" class="i">
+              <i class="material-icons md-24">save</i>
+            </div>
+          </div>
+          <div class="row" id="rowAt3">
+            <div class="hour col-2">
+              3pm 
+            </div>
+            <div contenteditable="true" class="col-9" id="contentAt3">
+              Write your Task here!
+            </div>
+            <div class="saveBtn" id="saveAt3" class="col-4" class="i"><i class="material-icons md-24">save</i>
+            </div>
+          </div>
+        </div>
       </div>
-      <div contenteditable="true" class="col-9" id="contentAt9">
-        Write your Task here!
-      </div>
-      <div class="saveBtn" id="saveAt9" class="col-4" class="i"><i class="material-icons md-24">save</i>
-      </div>
-    </div>
-    <div class="row" id="rowAt10">
-      <div class="hour col-2">
-        10am 
-      </div>
-      <div contenteditable="true" class="col-9" id="contentAt10">
-        Write your Task here!
-      </div>
-      <div class="saveBtn" id="saveAt10" class="col-4" class="i"><i class="material-icons md-24">save</i>
-      </div>
-    </div>
-    <div class="row" id="rowAt11">
-      <div class="hour col-2">
-        11am 
-      </div>
-      <div contenteditable="true" class="col-9" id="contentAt11">
-        Write your Task here!
-      </div>
-      <div class="saveBtn" id="saveAt11" class="col-4" class="i"><i class="material-icons md-24">save</i>
-      </div>
-    </div>
-  </div>
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="./assets/script.js"></script>
-    
   </body>
 </html>
