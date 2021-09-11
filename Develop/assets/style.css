@@ -29,6 +29,7 @@ textarea{
   
   text-align: center;
   border-radius: 15px;
+  
 }
 
 .column{
@@ -53,6 +54,8 @@ textarea{
 }
 
 .hour {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
   text-align: center;
   background-color: #ffffff;
   color: #000000;
@@ -102,6 +105,10 @@ textarea{
   font-size: 35px;
   transition: all .3s ease-in-out;
   color: rgb(98, 17, 98)
+}
+
+#rowAt17  {
+  border-bottom: 1px solid black;
 }
 
 .footer {
